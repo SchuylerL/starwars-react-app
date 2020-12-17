@@ -1,5 +1,9 @@
 body {
-  background-image: url("img/deathstar.png");
+  background-image: url('img/deathstar.png');
+}
+button {
+  background-color: black;
+  border: none;
 }
 #trooper {
   max-width: 50px;
@@ -15,11 +19,12 @@ body {
   max-width: 100px;
   max-height: 100px;
   padding-left: 30px;
-  position: relative;
+  /* position: relative; */
+  /* display: inline-block; */
 }
 #filmPoster:hover {
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 300px;
+  max-height: 300px;
 }
 #hideDetails {
   width: 150px;
