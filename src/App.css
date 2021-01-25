@@ -11,17 +11,6 @@ body {
   justify-content: left;
   min-width: 25%;
 }
-/* #filmPoster {
-  max-width: 10%;
-  max-height: 10%;
-  padding-left: 30px;
-  position: relative;
-} */
-/*
-#filmPoster:hover {
-  max-width: 500px;
-  max-height: 500px;
-} */
 #hideDetails {
   width: 150px;
   background-color: black;
@@ -49,7 +38,6 @@ li {
   padding: 5px;
   background-color: black;
 }
-a:hover,
 #hideDetails:hover,
 #liurl:hover,
 #namelist:hover,
@@ -134,5 +122,5 @@ a {
   margin: 0 auto;
 }
 .zoom:hover {
-  transform: matrix(3, 0, 0, 3, -75, -20);
+  transform: matrix(3, 0, 0, 3, -75, 0);
 }

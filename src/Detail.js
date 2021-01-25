@@ -99,6 +99,7 @@ export default function Detail({ person }) {
                       href={`https://imdb.com/find?q=${url.Title}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="imdbLink"
                     >
                       <img
                         className="zoom"
@@ -115,21 +116,6 @@ export default function Detail({ person }) {
                       <li className="liNada">{links}</li>
                     </ul>
                   ))
-                ) : // : Array.isArray(personDetail[value]) ? (
-                //   personDetail[value].map((links) => (
-                //     <ul>
-                //       <li className="liNada">
-                //         <a href={links}>{links}</a>
-                //       </li>
-                //     </ul>
-                //   ))
-                // )
-                value.includes('homeworld') ? (
-                  value.startsWith('http://') ? (
-                    <a href={personDetail[value]}>{personDetail[value]}</a>
-                  ) : (
-                    personDetail[value]
-                  )
                 ) : value.includes('url') ? (
                   <a href={personDetail[value]}>{personDetail[value]}</a>
                 ) : (
