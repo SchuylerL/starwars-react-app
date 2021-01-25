@@ -99,7 +99,6 @@ export default function Detail({ person }) {
                       href={`https://imdb.com/find?q=${url.Title}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="imdbLink"
                     >
                       <img
                         className="zoom"
