@@ -2,14 +2,14 @@ body {
   background-image: url('img/deathstar.png');
 }
 #trooper {
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 60px;
+  max-height: 60px;
 }
 #content {
   display: flex;
   align-items: left;
   justify-content: left;
-  min-width: 25%;
+  min-width: 20%;
 }
 #hideDetails {
   width: 150px;
