@@ -28,7 +28,8 @@ export default function Detail({ person }) {
     const posters = [];
     for (let i = 0; i < details.films.length; i++) {
       const film = details.films[i];
-      const res = await axios.get(film);
+      // const res = await axios.get(film);
+      const res = await axios.get('https://' + film.slice(7));
 
       let personDetailVal;
       if (details.homeworld.startsWith('http://')) {
