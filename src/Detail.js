@@ -8,7 +8,7 @@ function hideDetails() {
 
 async function callApi(res) {
   try {
-    const omdb = await axios.get('http://www.omdbapi.com/', {
+    const omdb = await axios.get('https://www.omdbapi.com/', {
       params: {
         apikey: 764452 + 'e7',
         t: res.data.title,
@@ -33,7 +33,9 @@ export default function Detail({ person }) {
 
       let personDetailVal;
       if (details.homeworld.startsWith('http://')) {
-        personDetailVal = await axios.get(details.homeworld);
+        personDetailVal = await axios.get(
+          'https://' + details.homeworld.slice(7)
+        );
         details.homeworld = personDetailVal.data.name;
       }
       if (details.species[0] !== undefined)
@@ -47,7 +49,9 @@ export default function Detail({ person }) {
         let response;
         for (let i = 0; i < details.vehicles.length; i++) {
           if (details.vehicles[0].startsWith('http://')) {
-            response = await axios.get(details.vehicles[i]);
+            response = await axios.get(
+              'https://' + details.vehicles[i].slice(7)
+            );
             arr.push(response.data.name);
           }
         }
@@ -58,7 +62,9 @@ export default function Detail({ person }) {
         let response;
         for (let i = 0; i < details.starships.length; i++) {
           if (details.starships[0].startsWith('http://')) {
-            response = await axios.get(details.starships[i]);
+            response = await axios.get(
+              'https://' + details.starships[i].slice(7)
+            );
             arr.push(response.data.name);
           }
         }
