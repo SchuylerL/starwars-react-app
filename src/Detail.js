@@ -28,7 +28,6 @@ export default function Detail({ person }) {
     const posters = [];
     for (let i = 0; i < details.films.length; i++) {
       const film = details.films[i];
-      // const res = await axios.get(film);
       const res = await axios.get('https://' + film.slice(7));
 
       let personDetailVal;
@@ -40,10 +39,12 @@ export default function Detail({ person }) {
       }
       if (details.species[0] !== undefined)
         if (details.species[0].startsWith('http://')) {
-          personDetailVal = await axios.get(details.species);
+          console.log(details.species[i].slice(7));
+          personDetailVal = await axios.get(
+            'https://' + details.species[i].slice(7)
+          );
           details.species = personDetailVal.data.name;
         }
-
       if (Array.isArray(details.vehicles)) {
         let arr = [];
         let response;
