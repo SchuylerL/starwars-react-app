@@ -39,7 +39,6 @@ export default function Detail({ person }) {
       }
       if (details.species[0] !== undefined)
         if (details.species[0].startsWith('http://')) {
-          console.log(details.species[i].slice(7));
           personDetailVal = await axios.get(
             'https://' + details.species[i].slice(7)
           );
