@@ -114,13 +114,10 @@ a {
   -webkit-animation-iteration-count: infinite;
 }
 .zoom {
-  /* padding-left: 15px; */
-  /* display: flex; */
   transition: transform 0.2s; /* Animation */
-  width: 75px;
-  /* height: 100px; */
+  width: 80px;
   margin: 0 auto;
 }
-.zoom:hover {
+/* .zoom:hover {
   transform: matrix(3, 0, 0, 3, -75, 0);
-}
+} */

@@ -49,7 +49,7 @@ class App extends React.Component {
     const person = people.find((person) => person.id === id);
     return (
       <div>
-        <h2>Star Wars - React</h2>
+        <h2>Star Wars Characters</h2>
         <div id="content">
           <List people={people} />
           {person ? <Detail person={person} /> : null}
