@@ -93,7 +93,12 @@ export default function Detail({ person }) {
       <button id="hideDetails" onClick={hideDetails}>
         <img id="trooper" src="storm.jfif" alt="stormtrooper" /> Hide Details
       </button>
-      <h2>Details for {`${personDetail.name}`}</h2>
+      {personDetail.name === undefined ? (
+        <h2>Loading...</h2>
+      ) : (
+        <h2>Details for {personDetail.name}</h2>
+      )}
+
       <div id="content">
         <ul>
           {Object.keys(personDetail).map((value, index) => {
