@@ -51,7 +51,7 @@ class App extends React.Component {
       <div>
         <h2>Star Wars Characters</h2>
         <div id="content">
-          <List people={people} />
+          {people.length === 0 ? <h2>Loading...</h2> : <List people={people} />}
           {person ? <Detail person={person} /> : null}
         </div>
       </div>

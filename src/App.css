@@ -27,13 +27,13 @@ h2 {
   padding: 15px 0 0 15px;
 }
 .liNada {
-  font-size: 18px;
+  font-size: 16px;
   border: none;
 }
 li {
   list-style: none;
   color: dodgerblue;
-  font-size: 1.2em;
+  font-size: 16px;
   border: solid 1px lightgray;
   padding: 5px;
   background-color: black;
@@ -53,12 +53,6 @@ a {
   text-decoration: none;
   border: none;
 }
-
-/* * {
-  margin: 0;
-  padding: 0;
-  border: 0;
-} */
 @keyframes slide {
   from {
     bottom: 100%;
@@ -84,7 +78,7 @@ a {
 .crawlTitle {
   color: gold;
   padding: 0 30px 0 30px;
-  font-size: 18px;
+  font-size: 16px;
   width: 300px;
 }
 .marquee {
@@ -101,7 +95,7 @@ a {
   top: 0;
   white-space: normal;
   height: 80vh;
-  font-size: 18px;
+  font-size: 16px;
   /* animation-delay: 3s; */
   animation-name: slide;
   animation-duration: 60s;
@@ -115,7 +109,7 @@ a {
 }
 .zoom {
   transition: transform 0.2s; /* Animation */
-  width: 80px;
+  width: 85px;
   margin: 0 auto;
 }
 /* .zoom:hover {

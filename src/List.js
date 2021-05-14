@@ -9,7 +9,7 @@ export default function List({ people }) {
           return (
             <a id="namelist" key={person.id} href={`#${person.id}`}>
               <li id="namelistli" key={person.id}>
-                {person.id} {person.name}
+                {person.name}
               </li>
             </a>
           );
