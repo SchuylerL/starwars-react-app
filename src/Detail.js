@@ -89,28 +89,31 @@ export default function Detail({ person }) {
   }, [person]);
 
   return (
-    <div>
-      <button id="hideDetails" onClick={hideDetails}>
-        <img id="trooper" src="storm.jfif" alt="stormtrooper" /> Hide Details
-      </button>
-      {personDetail.name === undefined ? (
-        <h2>Loading...</h2>
-      ) : (
-        <h2>Details for {personDetail.name}</h2>
-      )}
-
+    <div className="detailDiv">
+      <div id="detailHeader">
+        {personDetail.name === undefined ? (
+          <h2>Loading...</h2>
+        ) : (
+          <h2>Details for {personDetail.name}</h2>
+        )}
+        <button id="hideDetails" onClick={hideDetails}>
+          <img id="trooper" src="storm.jfif" alt="stormtrooper" />
+          Close
+        </button>
+      </div>
       <div id="content">
         <ul>
           {Object.keys(personDetail).map((value, index) => {
             return (
-              <li key={index}>
+              <li className="detailsList" key={index}>
                 {value}:{' '}
                 {value.includes('films') ? (
-                  personDetail.films.map((url) => (
+                  personDetail.films.map((url, index) => (
                     <a
                       href={`https://imdb.com/find?q=${url.Title}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      key={index + 1}
                     >
                       <img
                         className="zoom"
@@ -122,13 +125,17 @@ export default function Detail({ person }) {
                   ))
                 ) : value.includes('vehicles') ||
                   value.includes('starships') ? (
-                  personDetail[value].map((links) => (
-                    <ul>
-                      <li className="liNada">{links}</li>
+                  personDetail[value].map((links, index) => (
+                    <ul key={index + 4}>
+                      <li className="liNada" key={index + 2}>
+                        {links}
+                      </li>
                     </ul>
                   ))
                 ) : value.includes('url') ? (
-                  <a href={personDetail[value]}>{personDetail[value]}</a>
+                  <a href={personDetail[value]} key={index + 3}>
+                    {personDetail[value]}
+                  </a>
                 ) : (
                   personDetail[value]
                 )}
@@ -136,7 +143,7 @@ export default function Detail({ person }) {
             );
           })}
         </ul>
-        {Object.keys(personDetail).map((value, index) => {
+        {/* {Object.keys(personDetail).map((value, index) => {
           let randCrawl = Math.floor(
             Math.random() * Math.floor(personDetail.films.length)
           );
@@ -156,7 +163,7 @@ export default function Detail({ person }) {
               ) : null}
             </div>
           );
-        })}
+        })} */}
       </div>
     </div>
   );

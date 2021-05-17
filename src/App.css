@@ -1,34 +1,45 @@
 body {
   background-image: url('img/deathstar.png');
 }
-#trooper {
-  max-width: 60px;
-  max-height: 60px;
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  margin-top: 10px;
 }
 #content {
   display: flex;
-  align-items: left;
-  justify-content: left;
-  min-width: 20%;
+}
+#trooper {
+  max-width: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
 #hideDetails {
-  width: 150px;
-  background-color: black;
-  color: dodgerblue;
-  padding: 5px;
+  background-color: transparent;
+  color: white;
   border-radius: 20px;
   border: none;
 }
-h1,
+#detailHeader {
+  display: flex;
+  justify-content: space-between;
+}
+h3,
 h2 {
   color: white;
-  display: inline-block;
-  margin: auto;
-  padding: 15px 0 0 15px;
 }
 .liNada {
   font-size: 16px;
   border: none;
+}
+.detailDiv {
+  margin-left: 35px;
+}
+ul {
+  padding: 0;
 }
 li {
   list-style: none;
@@ -37,6 +48,9 @@ li {
   border: solid 1px lightgray;
   padding: 5px;
   background-color: black;
+}
+.detailsList {
+  width: 50vw;
 }
 #hideDetails:hover,
 #liurl:hover,
@@ -79,12 +93,12 @@ a {
   color: gold;
   padding: 0 30px 0 30px;
   font-size: 16px;
-  width: 300px;
+  width: 350px;
 }
 .marquee {
   color: gold;
   height: 80vh;
-  width: 300px;
+  width: 350px;
   line-height: 40px;
   overflow: hidden;
   position: relative;
@@ -110,7 +124,7 @@ a {
 .zoom {
   transition: transform 0.2s; /* Animation */
   width: 85px;
-  margin: 0 auto;
+  margin: 0 5px;
 }
 /* .zoom:hover {
   transform: matrix(3, 0, 0, 3, -75, 0);
