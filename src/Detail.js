@@ -106,7 +106,7 @@ export default function Detail({ person }) {
           {Object.keys(personDetail).map((value, index) => {
             return (
               <li className="detailsList" key={index}>
-                {value}:{' '}
+                {value}: {value.includes('films') ? <br /> : null}
                 {value.includes('films') ? (
                   personDetail.films.map((url, index) => (
                     <a

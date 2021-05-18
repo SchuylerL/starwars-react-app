@@ -36,7 +36,7 @@ class App extends React.Component {
 
       const people = [];
       // for (let i = 0; i < starwars.length; i++) {
-      for (let i = 0; i < 23; i++) {
+      for (let i = 0; i < 22; i++) {
         people[i] = starwars[i];
         people[i].id = i + 1;
       }
@@ -50,7 +50,6 @@ class App extends React.Component {
     const person = people.find((person) => person.id === id);
     return (
       <div className="container">
-        <h3>Star Wars Characters</h3>
         <div id="content">
           {people.length === 0 ? <h2>Loading...</h2> : <List people={people} />}
           {person ? <Detail person={person} /> : null}

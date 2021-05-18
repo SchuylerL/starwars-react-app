@@ -3,7 +3,8 @@ import './App.css';
 
 export default function List({ people }) {
   return (
-    <div>
+    <div id="peopleList">
+      <h2 id="titleHeader">Star Wars Characters</h2>
       <div id="content">
         <ul>
           {people.map((person) => {
