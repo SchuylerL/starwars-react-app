@@ -53,7 +53,7 @@ li {
   background-color: black;
 }
 #peopleList {
-  width: 15vw;
+  width: 20vw;
   text-align: center;
 }
 .detailsList {
@@ -75,7 +75,7 @@ a {
   border: none;
 }
 #namelistli {
-  width: 14vw;
+  width: 19vw;
 }
 @keyframes slide {
   from {
