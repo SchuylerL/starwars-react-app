@@ -57,7 +57,7 @@ li {
   text-align: center;
 }
 .detailsList {
-  width: vw;
+  width: 35vw;
 }
 #hideDetails:hover,
 #liurl:hover,
