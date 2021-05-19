@@ -10,7 +10,7 @@ async function callApi(res) {
   try {
     const omdb = await axios.get('https://www.omdbapi.com/', {
       params: {
-        apikey: 764452 + 'e7',
+        apikey: process.env.REACT_APP_API_KEY,
         t: res.data.title,
         y: res.data.release_date.substring(0, 4),
       },
@@ -92,7 +92,7 @@ export default function Detail({ person }) {
     <div className="detailDiv">
       <div id="detailHeader">
         {personDetail.name === undefined ? (
-          <h2>Loading...</h2>
+          <h2>Loading... </h2>
         ) : (
           <h2>Details for {personDetail.name}</h2>
         )}
