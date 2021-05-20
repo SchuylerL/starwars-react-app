@@ -1,3 +1,8 @@
+# Star Wars Characters
+This React app allows users to browse through a list of character information from the Star Wars movies. The information is retrieved from an API using axios.
+#
+run yarn, then yarn start
+#
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
